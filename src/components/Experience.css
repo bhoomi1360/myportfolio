@@ -1,0 +1,128 @@
+.experience__timeline {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.experience__item {
+  display: flex;
+  gap: 2rem;
+  position: relative;
+}
+
+.experience__line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 20px;
+  padding-top: 1.75rem;
+}
+
+.experience__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.experience__connector {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(180deg, var(--border-color), transparent);
+  margin-top: 0.5rem;
+}
+
+.experience__card {
+  flex: 1;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.experience__card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.experience__type {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.5rem;
+}
+
+.experience__role {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.experience__company {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.experience__period {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  padding: 0.3rem 0.8rem;
+  background: var(--bg-glass);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+}
+
+.experience__points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.experience__points li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.experience__bullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .experience__item {
+    gap: 1rem;
+  }
+
+  .experience__card-top {
+    flex-direction: column;
+  }
+
+  .experience__period {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience__line {
+    display: none;
+  }
+}
