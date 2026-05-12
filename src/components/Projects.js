@@ -4,6 +4,20 @@ import "./Projects.css";
 
 const projects = [
   {
+    title: "AI Chatbot",
+    description:
+      "A premium, feature-rich AI chatbot with real-time streaming responses, message history, and persona customization. Built for a seamless conversational experience.",
+    tech: ["Next.js", "OpenAI API", "Tailwind CSS"],
+    highlights: [
+      "Real-time message streaming",
+      "Interactive persona customization",
+      "Mobile-responsive premium UI",
+    ],
+    gradient: "linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%)",
+    icon: "🤖",
+    link: "https://bhoomiharshchatbot.vercel.app/",
+  },
+  {
     title: "Drive API Gallery",
     description:
       "A media gallery web app that fetches and displays images directly from Google Drive using the Drive API. Integrated with Sanity CMS for automated data management.",
@@ -15,6 +29,7 @@ const projects = [
     ],
     gradient: "linear-gradient(135deg, #a78bfa 0%, #6366f1 100%)",
     icon: "🖼️",
+    link: "https://drivegallery.vercel.app/",
   },
   {
     title: "RedChilli Restaurant",
@@ -54,6 +69,7 @@ const projects = [
     ],
     gradient: "linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)",
     icon: "💼",
+    link: "https://portfolio-developer-eosin.vercel.app/",
   },
 ];
 
@@ -114,6 +130,16 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+                {project.link && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="projects__card-link">
+                    Live Demo
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                )}
               </div>
             </div>
           ))}
